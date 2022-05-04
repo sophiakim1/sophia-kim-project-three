@@ -6,8 +6,7 @@ body {
 }
 
 .showcase {
-  background: url('https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
-  no-repeat center/cover;
+  background: url('https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center/cover;
   height: 400px;
 }
 
@@ -48,11 +47,9 @@ section {
 img {
   padding-bottom: 10px;
   display: block;
-  vertical-align: middle;
   max-width: 100%;
   height: auto;
 }
-
 
 /* Typography */
 h1 {
@@ -81,7 +78,7 @@ a {
   color: #fff;
 }
 
-a:hover {
+a:hover, a:focus {
   color: rgb(133, 132, 132)
 }
 
@@ -101,7 +98,7 @@ footer {
   color: #fff;
 }
 
-/* SearchForm */
+/* Search */
 input {
   padding: 0.25rem 0.5rem;
   border-top-left-radius: 0.5rem;
@@ -126,7 +123,7 @@ button {
   font-family: inherit;
 }
 
-/* mediaqueries */
+/* Mediaqueries */
 @media (min-width: 870px) {
   section {
     display: flex;

@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Search from './components/Search'
+// Modules
+import React, { useState, useEffect } from 'react';
+
+// Components
+import Search from './components/Search';
+import Footer from './components/Footer';
 
 const NYTIMES_URL = 'nytimes.com/';
 
@@ -16,7 +20,6 @@ const App = () => {
         )
         const articles = await res.json()
         setArticles(articles.response.docs)
-        console.log(articles.response.docs);
         setIsLoading(false)
       } catch (error) {
       console.error(error);
@@ -46,12 +49,17 @@ const App = () => {
               lead_paragraph,
               web_url,
               _id,
+              news_desk,
               multimedia
             } = article
 
             return (
               <article key={_id}>
-                <img src={multimedia[0] && ('https://' + NYTIMES_URL + multimedia[0].url)} className="articleImage"></img>
+                <img 
+                  src={multimedia[0] && ('https://' + NYTIMES_URL + multimedia[0].url)} 
+                  className="articleImage" 
+                  alt= {news_desk} 
+                />
                 <h2>{main}</h2>
                 <p>{abstract}</p>
                 <p>{lead_paragraph}</p>
@@ -61,7 +69,7 @@ const App = () => {
                 </ul>
                 <a href={web_url} target="_blank">Read full news article</a>
               </article>
-)
+            )
           })}
         </section>
         )}
