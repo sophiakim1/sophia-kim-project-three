@@ -67,12 +67,13 @@ const App = () => {
                 <ul>
                   <li>{original}</li>
                 </ul>
-                <a href={web_url} target="_blank">Read full news article</a>
+                <a href={web_url} target="_blank" rel="noreferrer">Read full news article</a>
               </article>
             )
           })}
         </section>
         )}
+    <Footer />
     </>
   );
 }
