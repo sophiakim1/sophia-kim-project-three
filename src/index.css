@@ -1,13 +1,142 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.showcase {
+  background: url('https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
+  no-repeat center/cover;
+  height: 400px;
+}
+
+.showcase .overlay {
+  background-color: rgba(0,0,0,0.4);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  padding: 0 5px;
+}
+
+article {
+  background-color: rgb(36, 36, 36);
+  color: #fff;
+  padding: 2.75rem 1.5rem;
+  border-radius: 8px;
+  margin: auto 0;
+}
+
+ul {
+  margin: 1rem 0;
+  list-style: none;
+  padding: 14px 0;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 40px;
+  padding: 3.75rem 2rem 6.25rem 2rem;
+}
+
+img {
+  padding-bottom: 10px;
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Typography */
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 5rem;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: rgb(133, 132, 132)
+}
+
+/* footer */
+footer {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: #f3ca2f;
+}
+
+.name {
+  text-decoration: none;
+  color: #f3ca2f;
+}
+
+.name:hover {
+  color: #fff;
+}
+
+/* SearchForm */
+input {
+  padding: 0.25rem 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 100%;
+  font-family: inherit;
+  border-color: #fff;
+  border-style: solid;
+  color:rgb(113, 113, 113);
+}
+
+button {
+  background-color: rgb(5 150 105);
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: #fff;
+  border-color: rgb(5 150 105);
+  border-style: solid;
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* mediaqueries */
+@media (min-width: 870px) {
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 110px;
+  }
+  
+  article {
+    max-width: 40%;
+    height: auto;
+    margin: 0;
+  }
 }
